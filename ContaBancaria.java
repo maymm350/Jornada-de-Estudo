@@ -1,41 +1,51 @@
 public class ContaBancaria {
-    // saldo privado para ninguém mudar direto
+    private String titular;
     private double saldo;
 
-    // método pra ver o saldo
+    // construtor com regra de idade minima
+    public ContaBancaria(String titularInicial, double saldoInicial, int idade) {
+        if (idade >= 18) {
+            this.titular = titularInicial;
+            this.saldo = saldoInicial;
+            System.out.println("Conta criada para " + titularInicial + " com saldo inicial de " + saldoInicial);
+        } else {
+            System.out.println("Erro: idade abaixo do limite para abertura de conta.");
+        }
+    }
+
+    public String getTitular() {
+        return this.titular;
+    }
+
     public double getSaldo() {
         return this.saldo;
     }
 
-    // método pra colocar dinheiro
     public void depositar(double valor) {
         if (valor > 0) {
             this.saldo += valor;
-            System.out.println("Depositei: " + valor);
-            System.out.println("Novo saldo: " + this.saldo);
+            System.out.println("Depósito realizado: " + valor);
         } else {
-            System.out.println("Valor invalido!");
+            System.out.println("Valor inválido para depósito.");
         }
     }
 
-    // método pra tirar dinheiro
     public void sacar(double valor) {
-        // verifica se tem saldo e se o valor é positivo
         if (valor > 0 && valor <= this.saldo) {
             this.saldo -= valor;
-            System.out.println("Saque de " + valor + " feito com sucesso");
+            System.out.println("Saque realizado: " + valor);
         } else {
-            System.out.println("Erro: Saldo insuficiente ou valor errado");
+            System.out.println("Saque negado: saldo insuficiente ou valor inválido.");
         }
     }
 
     public static void main(String[] args) {
-        ContaBancaria minhaConta = new ContaBancaria();
+        // testando a criacao de conta com o construtor
+        ContaBancaria conta = new ContaBancaria("Maycon", 500.0, 20);
         
-        System.out.println("--- Testando a conta ---");
-        minhaConta.depositar(500);
-        minhaConta.sacar(200);
-        minhaConta.sacar(400); // aqui deve dar erro
-        System.out.println("Saldo no final: " + minhaConta.getSaldo());
+        conta.depositar(200.0);
+        conta.sacar(150.0);
+        
+        System.out.println("Saldo final: " + conta.getSaldo());
     }
 }

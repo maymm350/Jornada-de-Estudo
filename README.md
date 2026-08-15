@@ -89,4 +89,21 @@ O sistema realiza a transferência de valores entre contas:
 3. Independência: Cada conta mantém seu estado e saldo de forma isolada.
 
 ---
+
+## Sexta Conquista: Construtores e Regras de Inicializacao
+
+Implementação de construtores para inicializacao de objetos com dados obrigatorios e aplicacao de regras de negocio no momento da criacao da conta.
+
+### O que foi aprendido e aplicado:
+* Construtores em Java: Metodos especiais executados no momento da instanciacao do objeto.
+* Parametros de Inicializacao: Passagem de dados essenciais (titular, saldo inicial, idade) na criacao.
+* Validacao Previa (Regras de Negocio): Aplicacao de estruturas condicionais dentro do construtor para bloquear criacoes invalidas (ex: restricao de idade minima).
+
+### Lógica do Código:
+O construtor valida as condicoes antes de instanciar o objeto:
+1. Validacao de Idade: Verifica se o titular possui idade minima de 18 anos.
+2. Inicializacao de Atributos: Atribui os valores iniciais de titular e saldo apenas se a validacao for atendida.
+3. Seguranca Estrutural: Impede a existencia de objetos com estados invalidos no sistema.
+
+---
 *Repositório mantido para fins de registro de aprendizado e evolução técnica.*
