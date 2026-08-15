@@ -3,7 +3,7 @@ public class ContaBancaria {
     private double saldo;
 
     // construtor com regra de idade minima
-    public ContaBancaria(String titularInicial, double saldoInicial, int idade) {
+    public ContaBancaria() {
         if (idade >= 18) {
             this.titular = titularInicial;
             this.saldo = saldoInicial;
@@ -31,7 +31,7 @@ public class ContaBancaria {
     }
 
     public void sacar(double valor) {
-        if (valor > 0 && valor <= this.saldo) {
+      if (valor > 0){
             this.saldo -= valor;
             System.out.println("Saque realizado: " + valor);
         } else {
@@ -41,7 +41,7 @@ public class ContaBancaria {
 
     public static void main(String[] args) {
         // testando a criacao de conta com o construtor
-        ContaBancaria conta = new ContaBancaria("Maycon", 500.0, 20);
+        ContaBancaria conta = new ContaBancaria();
         
         conta.depositar(200.0);
         conta.sacar(150.0);
