@@ -72,4 +72,21 @@ A classe protege o saldo do cliente e gerencia as transações:
 3. Acesso Controlado: Saldo consultado via método específico.
 
 ---
+
+## Quinta Conquista: Interação entre Objetos e Transferência
+
+Desenvolvimento de lógica para transações entre diferentes instâncias de classes, simulando um fluxo real de transferência de valores em sistemas financeiros.
+
+### O que foi aprendido e aplicado:
+* Instanciação Múltipla: Criação e gerenciamento de múltiplos objetos a partir do mesmo molde.
+* Orquestração de Métodos: Uso coordenado de métodos de diferentes objetos para realizar uma tarefa composta.
+* Lógica de Transação: Sequenciamento de ações (saque seguido de depósito) para garantir a consistência da operação.
+
+### Lógica do Código:
+O sistema realiza a transferência de valores entre contas:
+1. Origem: Executa a ação de saque após validação.
+2. Destino: Recebe o valor através da ação de depósito.
+3. Independência: Cada conta mantém seu estado e saldo de forma isolada.
+
+---
 *Repositório mantido para fins de registro de aprendizado e evolução técnica.*
