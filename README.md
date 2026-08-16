@@ -1,109 +1,55 @@
-# Jornada de Estudo - Desenvolvimento Java Backend
+# Jornada de Estudo: Engenharia de Software Backend (Java)
 
-Este repositório registra a evolução técnica em Java, com foco na construção de sistemas robustos e escaláveis para o setor financeiro e de tecnologia.
-
-## Primeira Conquista: Motor de Análise de Risco
-
-Aplicação de conceitos fundamentais de lógica de programação para resolver um problema de backend: a classificação automática de perfis para análise de crédito.
-
-### O que foi aprendido e aplicado:
-* Variáveis e Tipos Primitivos: Uso de int para idade e double para valores monetários.
-* Estruturas Condicionais (if, else if, else): Criação de um fluxo de decisão para categorizar perfis.
-* Operadores Lógicos (&&): Implementação de regras compostas para validação de requisitos.
-* Visão de Engenharia: Foco na resolução de problemas práticos e na eficiência da lógica aplicada.
-
-### Lógica do Código:
-O sistema processa a idade e a renda para determinar a elegibilidade e a categoria de juros:
-1. Alta Renda (> 5000): Categoria A (Juros Baixos).
-2. Renda Média (2000 a 5000): Categoria B (Juros Médios).
-3. Critérios não atendidos: Solicitação Recusada por política de risco.
+Repositório dedicado ao registro da evolução técnica em desenvolvimento backend, com foco em sistemas financeiros e arquitetura robusta. O objetivo central é o domínio do ecossistema Java e a aplicação de padrões de projeto em cenários críticos de negócio.
 
 ---
 
-## Segunda Conquista: Calculador de Solvência Financeira
-
-Evolução da lógica para incluir cálculos aritméticos e validações de margem consignável, simulando um motor de aprovação de crédito.
-
-### O que foi aprendido e aplicado:
-* Operadores Aritméticos: Uso de divisão e multiplicação para cálculos de parcelas e limites percentuais.
-* Lógica de Comparação: Validação de margem de segurança (regra dos 30%).
-* Formatação de Dados: Apresentação de valores monetários.
-
-### Lógica do Código:
-O sistema calcula o valor da parcela mensal e verifica se ela compromete mais de 30% da renda informada:
-1. Cálculo da Parcela: Empréstimo / Prazo.
-2. Cálculo do Limite: Renda * 0.3.
-3. Validação: Se Parcela <= Limite, o crédito é aprovado.
+## 🏦 Foco de Estudo: Sistemas Financeiros
+O desenvolvimento neste repositório é guiado por regras de negócio reais do setor bancário, priorizando:
+- **Resiliência:** Garantia de consistência em transações financeiras.
+- **Segurança:** Encapsulamento rigoroso e proteção de estados sensíveis.
+- **Escalabilidade:** Uso de Programação Orientada a Objetos para sistemas modulares.
 
 ---
 
-## Terceira Conquista: Sistema de Combate RPG (POO)
+## 🚀 Evolução Técnica e Conquistas
 
-Aplicação de Programação Orientada a Objetos (POO) para criar um sistema de combate dinâmico, gerenciando estados e interações entre múltiplos objetos.
+### 01. Fundamentos e Lógica de Crédito
+Implementação de motores de decisão baseados em política de risco.
+- **Aplicação:** Análise de elegibilidade para crédito e categorias de juros.
+- **Conceitos:** Estruturas condicionais complexas e operadores lógicos.
 
-### O que foi aprendido e aplicado:
-* Interação entre Objetos: Métodos que recebem outros objetos como parâmetro.
-* Gerenciamento de Estados: Uso de variáveis booleanas para controlar ações e estados de objetos.
-* Encapsulamento de Lógica: Centralização de regras de negócio dentro da classe.
-* Math Class: Uso de funções matemáticas para garantia de integridade dos dados.
+### 02. Motor de Solvência Financeira
+Cálculo de margem consignável e validação de capacidade de pagamento.
+- **Aplicação:** Regra de ouro dos 30% de comprometimento de renda.
+- **Conceitos:** Operadores aritméticos e precisão de dados monetários.
 
-### Lógica do Código:
-O sistema simula um duelo entre entidades com as seguintes mecânicas:
-1. Ataque Dinâmico: O dano é calculado com base no estado do alvo.
-2. Sistema de Defesa: Redução de dano baseada em estado booleano.
-3. Gerenciamento de Vida: Sistema de cura com travas de limite máximo.
+### 03. Arquitetura Orientada a Objetos (POO)
+Transição para sistemas modulares e interativos.
+- **Aplicação:** Sistema de combate (RPG) para teste de interações entre objetos e gerenciamento de estados.
+- **Conceitos:** Classes, Atributos, Métodos e Instanciação.
 
----
+### 04. Segurança e Integridade de Dados
+Proteção de ativos financeiros através de interfaces controladas.
+- **Aplicação:** Proteção de saldo bancário e validação de operações de saque/depósito.
+- **Conceitos:** Encapsulamento (`private`), Getters e Modificadores de Acesso.
 
-## Quarta Conquista: Encapsulamento e Proteção de Dados
+### 05. Orquestração de Transações
+Simulação de fluxos de transferência entre múltiplas contas.
+- **Aplicação:** Transferências bancárias seguras entre diferentes instâncias.
+- **Conceitos:** Interação entre objetos e sequenciamento de métodos.
 
-Implementação de modificadores de acesso e métodos de interface para garantir a integridade dos dados e a segurança das operações financeiras.
-
-### O que foi aprendido e aplicado:
-* Modificadores de Acesso: Uso do private para impedir o acesso direto e não autorizado aos atributos da classe.
-* Métodos de Acesso (Getters): Criação de interfaces seguras para leitura de estados internos.
-* Validação de Entrada: Implementação de lógica de proteção em métodos de alteração (depósito e saque).
-* Segurança de Negócio: Garantia de que operações críticas só ocorram sob condições validadas.
-
-### Lógica do Código:
-A classe protege o saldo do cliente e gerencia as transações:
-1. Depósito Protegido: Apenas valores positivos são aceitos.
-2. Saque Validado: Exige valor positivo e saldo suficiente disponível.
-3. Acesso Controlado: Saldo consultado via método específico.
+### 06. Hierarquia e Regras de Inicialização
+Uso de herança e construtores para especialização de serviços.
+- **Aplicação:** Contas Correntes com limites de cheque especial e taxas operacionais.
+- **Conceitos:** Herança, Polimorfismo (`@Override`), Construtores e `super()`.
 
 ---
 
-## Quinta Conquista: Interação entre Objetos e Transferência
-
-Desenvolvimento de lógica para transações entre diferentes instâncias de classes, simulando um fluxo real de transferência de valores em sistemas financeiros.
-
-### O que foi aprendido e aplicado:
-* Instanciação Múltipla: Criação e gerenciamento de múltiplos objetos a partir do mesmo molde.
-* Orquestração de Métodos: Uso coordenado de métodos de diferentes objetos para realizar uma tarefa composta.
-* Lógica de Transação: Sequenciamento de ações (saque seguido de depósito) para garantir a consistência da operação.
-
-### Lógica do Código:
-O sistema realiza a transferência de valores entre contas:
-1. Origem: Executa a ação de saque após validação.
-2. Destino: Recebe o valor através da ação de depósito.
-3. Independência: Cada conta mantém seu estado e saldo de forma isolada.
+## 🛠️ Stack Tecnológica
+- **Linguagem:** Java 17+
+- **Versionamento:** Git & GitHub
+- **Ambiente:** Linux (Ubuntu) / VS Code
 
 ---
-
-## Sexta Conquista: Construtores e Regras de Inicializacao
-
-Implementação de construtores para inicializacao de objetos com dados obrigatorios e aplicacao de regras de negocio no momento da criacao da conta.
-
-### O que foi aprendido e aplicado:
-* Construtores em Java: Metodos especiais executados no momento da instanciacao do objeto.
-* Parametros de Inicializacao: Passagem de dados essenciais (titular, saldo inicial, idade) na criacao.
-* Validacao Previa (Regras de Negocio): Aplicacao de estruturas condicionais dentro do construtor para bloquear criacoes invalidas (ex: restricao de idade minima).
-
-### Lógica do Código:
-O construtor valida as condicoes antes de instanciar o objeto:
-1. Validacao de Idade: Verifica se o titular possui idade minima de 18 anos.
-2. Inicializacao de Atributos: Atribui os valores iniciais de titular e saldo apenas se a validacao for atendida.
-3. Seguranca Estrutural: Impede a existencia de objetos com estados invalidos no sistema.
-
----
-*Repositório mantido para fins de registro de aprendizado e evolução técnica.*
+*Este repositório é um documento vivo de evolução técnica e compromisso com a excelência em engenharia de software.*
